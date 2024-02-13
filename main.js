@@ -29,14 +29,22 @@ socket.on("clients-updated", (clients) => {
 });
 
 
-
+const temporizador = document.getElementById("temporizador")
 socket.on('gamestart', (text) => {
-  console.log({ text });
+temporizador.innerHTML=`${text}`
 });
+// <button class="answer-button btn btn-primary">Ciudad de México</button>
 
-
+const pregunta = document.getElementById("pregunta")
+const respuestas = document.getElementById("respuestas")
 socket.on('question', (text) => {
-  console.log({ text });
+  console.log({text})
+  console.log(text.pregunta)
+  respuestas.innerHTML=''
+  pregunta.textContent =`${text.pregunta} xddxxddx`
+  for (const respuesta of text.respuesta) {
+    respuestas.innerHTML = respuestas.innerHTML + `<button class="answer-button btn btn-primary"> ${respuesta} </button>`
+  }
 });
 
 
