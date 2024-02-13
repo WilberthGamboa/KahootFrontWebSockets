@@ -28,6 +28,13 @@ socket.on("clients-updated", (clients) => {
   
 });
 
+
+socket.on('gamestart', (text) => {
+  console.log({ text });
+});
+
+
+
 const input= document.getElementById("nombre")
 
 
