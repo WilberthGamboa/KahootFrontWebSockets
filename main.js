@@ -29,10 +29,15 @@ socket.on("clients-updated", (clients) => {
 });
 
 
+
 socket.on('gamestart', (text) => {
   console.log({ text });
 });
 
+
+socket.on('question', (text) => {
+  console.log({ text });
+});
 
 
 const input= document.getElementById("nombre")
