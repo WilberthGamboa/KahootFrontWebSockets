@@ -73,7 +73,12 @@ const input= document.getElementById("nombre")
 const ul = document.getElementById("respuestas")
 
 ul.addEventListener("click",(e) =>{
-  console.log(e.target.value)
+  console.log(e.target)
+  
+  console.log(e.target.textContent)
+  socket.emit('answer',{
+    name:e.target.textContent
+  })
 })
 
 
