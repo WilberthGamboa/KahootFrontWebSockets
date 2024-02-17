@@ -68,3 +68,12 @@ const input= document.getElementById("nombre")
   })
 
 
+
+  //
+const ul = document.getElementById("respuestas")
+
+ul.addEventListener("click",(e) =>{
+  console.log(e.target.value)
+})
+
+
