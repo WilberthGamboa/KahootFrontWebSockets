@@ -21,7 +21,7 @@ socket.on("clients-updated", (clients) => {
     if (clients[client].name == '') {
       usuarios.innerHTML = usuarios.innerHTML + ` <li class="list-group-item"> ${client} - ESPERANDO NOMBRE DE USUARIO </li>`
     }else{
-      usuarios.innerHTML = usuarios.innerHTML + ` <li class="list-group-item"> ${client} - ${clients[client].name} </li>`
+      usuarios.innerHTML = usuarios.innerHTML + ` <li class="list-group-item"> ${client} - ${clients[client].name}  - ${clients[client].totalDeRespuestasCorrectas}</li>`
     }
   
   }
