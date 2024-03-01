@@ -1,10 +1,11 @@
 <script>
 	import { onMount } from "svelte";
 	import { io } from "socket.io-client";
+
 	let socket;
 
 	onMount(() => {
-		socket = io("http://localhost:3000");
+		socket = io("http://192.168.253.109:3000");
 
 		const usuarios = document.getElementById("usuarios");
 		const temporizador = document.getElementById("temporizador");
@@ -175,7 +176,7 @@
 		border-radius: 10px;
 		box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
 		font-family: "Press Start 2P", cursive;
-		background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/9c3404112981173.601ebcc1dba2d.gif"); /* Animated background */
+		background-image: url("/background.gif"); /* Animated background */
 		background-size: cover;
 		color: #fff;
 		display: flex;
